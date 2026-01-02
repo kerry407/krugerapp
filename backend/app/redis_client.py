@@ -1,17 +1,20 @@
+import os
 import redis
 import json
-from app.config import REDIS_HOST, REDIS_PORT, REDIS_DB
+from app.config import REDIS_HOST, REDIS_PORT
+
 
 redis_client = redis.Redis(
     host=REDIS_HOST,
     port=REDIS_PORT,
-    db=REDIS_DB,
+    password=os.getenv("REDIS_PASSWORD"),
+    ssl=True if os.getenv("REDIS_TLS") == "true" else False,
     decode_responses=True
 )
 
 
-def save_submission(submission_id: str, data: dict):
-    redis_client.set(submission_id, json.dumps(data))
+def save_submission(submission_id: str, data: dict, ttl=1800):
+    redis_client.set(submission_id, ttl, json.dumps(data))
 
 
 def get_submission(submission_id: str):

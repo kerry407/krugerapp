@@ -11,5 +11,11 @@ def send_telegram_message(text: str):
         "parse_mode": "HTML",
     }
 
-    response = requests.post(url, json=payload, timeout=10)
-    response.raise_for_status()
+    try:
+        requests.post(
+            url,
+            json=payload,
+            timeout=3
+        )
+    except Exception:
+        pass
