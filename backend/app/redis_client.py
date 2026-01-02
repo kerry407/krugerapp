@@ -8,13 +8,17 @@ redis_client = redis.Redis(
     host=REDIS_HOST,
     port=REDIS_PORT,
     password=os.getenv("REDIS_PASSWORD"),
-    ssl=True if os.getenv("REDIS_TLS") == "true" else False,
+    ssl=os.getenv("REDIS_TLS", "false").lower() == "true",
     decode_responses=True
 )
 
 
 def save_submission(submission_id: str, data: dict, ttl=1800):
-    redis_client.set(submission_id, ttl, json.dumps(data))
+    redis_client.set(
+        submission_id,
+        json.dumps(data),
+        ex=int(ttl)
+    )
 
 
 def get_submission(submission_id: str):
