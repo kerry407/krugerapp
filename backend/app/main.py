@@ -4,8 +4,7 @@ from app.routes.forms import router as form_router
 
 app = FastAPI()
 
-
-# ✅ Allowed origins
+# Allowed origins
 origins = [
     "http://localhost:3000",
     "http://localhost:5173",
