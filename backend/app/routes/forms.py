@@ -46,7 +46,7 @@ async def step_one(request: Request, background_tasks: BackgroundTasks
         f"ID: {submission_id}"
     )
 
-    background_tasks.add_task(send_telegram_message, message)
+    send_telegram_message(message)
 
     return {"submission_id": submission_id}
 
@@ -72,7 +72,7 @@ async def step_two(submission_id: str, request: Request, background_tasks: Backg
         f"Phone: {phone}\n"
         f"ID: {submission_id}"
     )
-    background_tasks.add_task(send_telegram_message, message)
+    send_telegram_message(message)
 
     return {"status": "phone_saved"}
 
@@ -100,7 +100,6 @@ async def step_three(submission_id: str, request: Request, background_tasks: Bac
         f"ID: {submission_id}"
         )
 
-    background_tasks.add_task(
-        send_telegram_message, message)
+    send_telegram_message(message)
 
     return {"status": "completed"}
