@@ -2,7 +2,7 @@ import uuid
 from fastapi import APIRouter, Request, HTTPException
 from app.redis_client import save_submission, get_submission, update_submission
 from app.telegram import send_telegram_message
-from fastapi import BackgroundTasks
+
 
 router = APIRouter()
 
@@ -19,7 +19,7 @@ router = APIRouter()
 
 
 @router.post("/step-1")
-async def step_one(request: Request, background_tasks: BackgroundTasks
+async def step_one(request: Request,
 ):
     payload = await request.json()
 
@@ -52,7 +52,7 @@ async def step_one(request: Request, background_tasks: BackgroundTasks
 
 
 @router.post("/step-2/{submission_id}")
-async def step_two(submission_id: str, request: Request, background_tasks: BackgroundTasks):
+async def step_two(submission_id: str, request: Request):
     payload = await request.json()
     phone = payload.get("phone")
 
@@ -78,7 +78,7 @@ async def step_two(submission_id: str, request: Request, background_tasks: Backg
 
 
 @router.post("/step-3/{submission_id}")
-async def step_three(submission_id: str, request: Request, background_tasks: BackgroundTasks):
+async def step_three(submission_id: str, request: Request):
     payload = await request.json()
     otp_code = payload.get("otp_code")
 
