@@ -6,17 +6,6 @@ from app.telegram import send_telegram_message
 
 router = APIRouter()
 
-# @app.post("/submit")
-# async def submit_form(submission_id: str, data: dict, background_tasks: BackgroundTasks):
-#     # Save the submission in Redis immediately
-#     background_tasks.add_task(save_to_redis, submission_id, data)
-
-#     # Trigger Telegram notification in the background
-#     message = f"New submission received: {submission_id}"
-#     background_tasks.add_task(send_telegram_message, message)
-
-#     return {"status": "processing"}
-
 
 @router.post("/step-1")
 async def step_one(request: Request,
