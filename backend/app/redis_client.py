@@ -1,15 +1,17 @@
 import os
 import redis
 import json
-from app.config import REDIS_HOST, REDIS_PORT
 
 
-redis_client = redis.Redis(
-    host=REDIS_HOST,
-    port=REDIS_PORT,
-    password=os.getenv("REDIS_PASSWORD"),
-    ssl=os.getenv("REDIS_TLS", "false").lower() == "true",
-    decode_responses=True
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
+
+# 2. Optimized initialization
+redis_client = redis.Redis.from_url(
+    REDIS_URL,
+    decode_responses=True,      # Automatically converts bytes to strings
+    health_check_interval=30,   # Keeps the connection alive to prevent timeouts
+    socket_connect_timeout=5,   # Fails fast if the server is unreachable
+    retry_on_timeout=True       # Automatically retries if a connection drops
 )
 
 
