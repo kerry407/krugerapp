@@ -10,7 +10,7 @@ origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5501",      # VS Code Live Server
     "http://localhost:5501",
-    "https://viebaccount.pages.dev"
+    "https://viebaccount.netlify.app"
 ]
 
 app.add_middleware(
