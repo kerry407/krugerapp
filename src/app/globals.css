@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1c1c1c;
+  --color-neutral-primary: #636363;
+  --color-neutral-secondary: #D7D7D7;
+  --color-accent-one-color: #79bde9;
+  --color-accent-two-color: #002857;
+  --color-link-color: #063dff;
+
+  
+  --font-museo-slab: var(--font-museo-slab);
+  --font-sailec: var(--font-sailec);
+}
+
+body {
+  font-family: var(--font-lato);
+}
