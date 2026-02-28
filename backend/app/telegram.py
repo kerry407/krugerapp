@@ -24,12 +24,10 @@
 #     print(text)
 
 import requests
-import time
 from app.config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 
 
 def send_telegram_message(text: str) -> None:
-    time.sleep(0.2)
 
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
 

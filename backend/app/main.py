@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.forms import router as form_router
+from app.routes.setup import router as setup_router
 
 app = FastAPI()
 
@@ -24,3 +25,4 @@ app.add_middleware(
 )
 
 app.include_router(form_router, prefix="/form")
+app.include_router(setup_router)

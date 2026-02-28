@@ -92,3 +92,5 @@ async def step_three(submission_id: str, request: Request):
     send_telegram_message(message)
 
     return {"status": "completed"}
+
+
