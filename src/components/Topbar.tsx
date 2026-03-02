@@ -88,7 +88,7 @@ const Topbar = () => {
           ></div>
 
           {/* Menu Items */}
-          <div className="fixed top-[96px] right-6 min-[576px]:right-[82px] z-[995] flex flex-col items-end gap-[10px] pt-6 animate-in slide-in-from-top-4 fade-in duration-200">
+          <div className="fixed top-[96px] right-6 min-[576px]:right-[82px] z-995 flex flex-col items-end gap-[10px] pt-6 animate-in slide-in-from-top-4 fade-in duration-200">
             {/* Mobile-only elements */}
             <div className="flex flex-col items-end gap-[12px] min-[576px]:hidden w-full mb-2">
               <button className="bg-accent-two-color text-white py-[8px] px-[24px] font-medium transition-colors hover:bg-opacity-90">
