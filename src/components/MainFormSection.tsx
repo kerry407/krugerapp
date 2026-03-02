@@ -18,7 +18,7 @@ interface Step2Response {
 
 const MainFormSection = () => {
   const [personalCode, setPersonalCode] = useState("");
-  const [accordionOpen, setAccordionOpen] = useState(false);
+  const [accordionOpen, setAccordionOpen] = useState(true);
   const [schoolName, setSchoolName] = useState("");
   const [studentId, setStudentId] = useState("");
   const [schoolEmail, setSchoolEmail] = useState("");
