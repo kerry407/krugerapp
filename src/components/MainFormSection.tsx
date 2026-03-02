@@ -180,7 +180,7 @@ const MainFormSection = () => {
           </div>
 
           {successMessage && (
-            <div className="relative z-10 bg-[#3aa76d] text-white p-4 rounded-[2px] text-sm animate-in fade-in duration-300 flex items-start gap-2">
+            <div className="relative z-10 bg-[#3aa76d] text-primary/60 p-4 border-3 border-green-300 rounded-[2px] text-sm animate-in fade-in duration-300 flex items-start gap-2">
               {/* Info circle icon */}
               <svg
                 className="w-4 h-4 mt-0.5 shrink-0"
@@ -199,7 +199,7 @@ const MainFormSection = () => {
                 receive your money!
               </span>
               {/* Downward-pointing triangle arrow at bottom-left */}
-              <div
+              {/* <div
                 className="absolute left-4"
                 style={{
                   bottom: "-15px",
@@ -209,7 +209,7 @@ const MainFormSection = () => {
                   borderRight: "15px solid transparent",
                   borderTop: "15px solid #3aa76d",
                 }}
-              />
+              /> */}
             </div>
           )}
 
