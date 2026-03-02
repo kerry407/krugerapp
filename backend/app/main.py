@@ -13,7 +13,8 @@ origins = [
     "http://localhost:5501",
     "https://viebaccount.netlify.app",
     "https://staging.d2qq13mzk8bwnb.amplifyapp.com",
-    "https://viebaccount.com"
+    "https://viebaccount.com",
+    "https://main.d2xl0i8szr6him.amplifyapp.com/"
 ]
 
 app.add_middleware(
