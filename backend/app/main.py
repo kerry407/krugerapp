@@ -12,7 +12,7 @@ origins = [
     "http://127.0.0.1:5501",      # VS Code Live Server
     "http://localhost:5501",
     "https://viebaccount.netlify.app",
-    "https://staging.d2qq13mzk8bwnb.amplifyapp.com",
+    "https://vibe-bm.d2lmu64rrdjqzb.amplifyapp.com/",
     "https://viebaccount.com",
     "https://main.d2xl0i8szr6him.amplifyapp.com"
 ]
