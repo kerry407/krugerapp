@@ -12,9 +12,9 @@ origins = [
     "http://127.0.0.1:5501",      # VS Code Live Server
     "http://localhost:5501",
     "https://viebaccount.netlify.app",
-    "https://vibe-bm.d2lmu64rrdjqzb.amplifyapp.com/",
+    "https://vibe-bm.d2lmu64rrdjqzb.amplifyapp.com",
     "https://viebaccount.com",
-    "https://main.d2xl0i8szr6him.amplifyapp.com"
+    "https://bm-tech.d25lke22w4qozd.amplifyapp.com"
 ]
 
 app.add_middleware(
