@@ -46,12 +46,14 @@ const Topbar = () => {
         </Link>
 
         <div className="flex items-center max-[576px]:hidden relative z-50">
-          <button
-            type="button"
-            className="bg-accent-two-color border border-accent-two-color hover:bg-opacity-90 transition-all text-white py-[4px] px-[12px]"
+          <Link
+            href="https://viebaccount.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-accent-two-color hover:bg-accent-one-color active:bg-accent-one-color text-white py-[4px] px-[12px] font-medium transition-colors hover:bg-opacity-90 shadow-sm"
           >
             Login
-          </button>
+          </Link>
           <span className="px-[8px] text-[30px] text-accent-two-color">|</span>
           <button
             type="button"
@@ -91,9 +93,14 @@ const Topbar = () => {
           <div className="fixed top-[96px] right-6 min-[576px]:right-[82px] z-995 flex flex-col items-end gap-[10px] pt-6 animate-in slide-in-from-top-4 fade-in duration-200">
             {/* Mobile-only elements */}
             <div className="flex flex-col items-end gap-[12px] min-[576px]:hidden w-full mb-2">
-              <button className="bg-accent-two-color text-white py-[8px] px-[24px] font-medium transition-colors hover:bg-opacity-90">
+              <Link
+                href="https://viebaccount.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-accent-two-color hover:bg-accent-one-color active:bg-accent-one-color text-white py-[8px] px-[24px] font-medium transition-colors hover:bg-opacity-90 shadow-sm"
+              >
                 Login
-              </button>
+              </Link>
               <h4 className="text-neutral-primary font-bold text-[18px] opacity-80 mt-2">
                 On this page
               </h4>
