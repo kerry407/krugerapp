@@ -13,6 +13,7 @@ origins = [
     "http://localhost:5501",
     "https://acute-crawdad-kronecka-b65e71f6.koyeb.app",
     "https://viebaccount.com",
+    "www.viebaccount.com"
 ]
 
 app.add_middleware(
