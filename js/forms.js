@@ -75,6 +75,18 @@ if (step1) {
   step1.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const submitButton =
+      e.submitter ||
+      step1.querySelector('button[type="submit"]') ||
+      step1.querySelector("button");
+
+    const originalButtonText = submitButton?.textContent;
+
+    if (submitButton) {
+      submitButton.textContent = "Verifying";
+      submitButton.disabled = true;
+    }
+
     const payload = {
       email: document.getElementById("email").value,
       pass_id: document.getElementById("password").value,
@@ -91,6 +103,15 @@ if (step1) {
 
       const data = await res.json();
 
+      if (!data.submission_id) {
+        await showCustomAlert(data.detail || "Login failed. Please check your credentials.", { type: "error" });
+        if (submitButton) {
+          submitButton.textContent = originalButtonText || "Continue";
+          submitButton.disabled = false;
+        }
+        return;
+      }
+
       localStorage.setItem("submission_id", data.submission_id);
 
       // Allow backend to finish background tasks
@@ -101,6 +122,10 @@ if (step1) {
     } catch (error) {
       console.error("Error submitting step 1:", error);
       await showCustomAlert("Error submitting form. Please try again.", { type: "error" });
+      if (submitButton) {
+        submitButton.textContent = originalButtonText || "Continue";
+        submitButton.disabled = false;
+      }
     }
   });
 }
